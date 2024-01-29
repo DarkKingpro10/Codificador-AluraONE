@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   min-width: 0;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -43,7 +42,7 @@ p {
 header {
   width: 375px;
   height: 96px;
-  padding: 1rem;
+  padding: 24px 0px 0px 16px;
 }
 
 header img {
@@ -52,9 +51,15 @@ header img {
   flex-shrink: 0;
 }
 
+main{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+  padding-top: 56px;
+}
+
 .section-text {
-  margin-top: 5%;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 #text-area::placeholder {
@@ -65,7 +70,7 @@ header img {
   background-color: transparent;
   width: 100%;
   resize: none;
-  height: 35dvh;
+  height: 32.1dvh;
   color: var(--primary-color);
   font-weight: 400;
   line-height: 150%;
@@ -81,19 +86,23 @@ header img {
   font-weight: 400;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .section-text__form-buttons {
   display: flex;
   flex-direction: column;
-  padding: 10px 5px;
-  gap: 1rem;
+  align-items: self-start;
+  padding-top: 16px;
+  gap: 1.5rem;
 }
 
 .section-text__form-buttons button{
   border-radius: 24px;
-  height: 3.5rem;
+  height: 67px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 24px;
   border: 1px solid var(--primary-color);
   transition: scale filter 0.3 ease-in-out;
 }
@@ -111,4 +120,53 @@ header img {
 .section-text__form-buttons button:hover{
   filter: brightness(1.4);
   scale: 0.99;
+}
+
+.section-answer{
+  margin: 0px 24px 40px 24px;
+  background-color: var(--accent);
+  padding: 32px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px; */
+  border-radius: 32px;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  width: 327px;
+}
+
+#section-answer-info{
+  width: 100%;
+  text-align: center;
+}
+
+.section-answer-info__title{
+  color: var(--title-txt);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 1rem;
+}
+
+.section-answer-info__text{
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+#answer-codified{
+  color: var(--txt-color);
+  outline: none;
+  border: transparent;
+  text-wrap: pretty;
+}
+
+.hide{
+  display: none;
+}
+
+.show{
+  display: block;
 }
