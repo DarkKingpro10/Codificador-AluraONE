@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Challenge de Alura ONE. Trata sobre un encriptador con la opcion de desencriptar">
+  <meta property="og:title" content="Portafolio de un ingeniero de software">
+  <meta property="og:image"
+    content="https://user-images.githubusercontent.com/91544872/157673573-5e781ce9-601c-4ea3-9db1-b60bebf717aa.png">
+  <meta property="og:image:alt" content="Desafio de encriptado de ALURA ONE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="/icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Encriptador - Alura Challenge</title>
+</head>
+
+<body>
+  <header>
+    <img src="/icons/icon.svg" type="image/svg+xml" alt="Icono de ALURA">
+  </header>
+  <main>
+    <section class="section-text">
+      <form id="section-text__form">
+        <textArea id="text-area" placeholder="Ingrese el texto aquí" required></textArea>
+
+        <div class="section-text__form-info">
+          <img src="/icons/info.svg" type="image/svg+xml" alt="Icono de información">
+          <span>Solo letras minúsculas y sin acentos</span>
+        </div>
+
+        <div class="section-text__form-buttons">
+          <button type="submit" class="section-text__form-button-encrypt">Encriptar</button>
+          <button 
+          type="button"
+          class="section-text__form-button-decrypt">Desencriptar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section-answer">
+    </section>
+  </main>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
