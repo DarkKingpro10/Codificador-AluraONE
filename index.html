@@ -36,9 +36,7 @@
 
         <div class="section-text__form-buttons">
           <button type="submit" class="section-text__form-button-encrypt">Encriptar</button>
-          <button 
-          type="button"
-          class="section-text__form-button-decrypt">Desencriptar</button>
+          <button type="button" class="section-text__form-button-decrypt">Desencriptar</button>
         </div>
       </form>
     </section>
@@ -46,11 +44,12 @@
     <section class="section-answer">
       <section id="section-answer-info">
         <img src="/icons/noText-icon.png" alt="Icono de muñeco, buscando texto" id="section-answer-info-icon"
-        class="hide">
+          class="hide">
         <h1 class="section-answer-info__title">Ningún mensaje fue encontrado</h1>
         <span class="section-answer-info__text">Ingresa el texto que deseas encriptar o desencriptar</span>
       </section>
-      <textarea readonly id="answer-codified" class="hide"></textarea>
+      <textarea readonly id="answer-codified" placeholder="Ningún mensaje fue encontrado" class="hide"></textarea>
+      <button type="button" class="section-text__form-button-decrypt hide">Copiar</button>
     </section>
   </main>
   <script type="module" src="/main.js"></script>

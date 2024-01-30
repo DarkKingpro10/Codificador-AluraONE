@@ -97,7 +97,7 @@ main{
   gap: 1.5rem;
 }
 
-.section-text__form-buttons button{
+button{
   border-radius: 24px;
   height: 67px;
   width: 100%;
@@ -117,7 +117,7 @@ main{
   background-color: var(--accent);
 }
 
-.section-text__form-buttons button:hover{
+button:hover{
   filter: brightness(1.4);
   scale: 0.99;
 }
@@ -132,7 +132,6 @@ main{
   gap: 16px; */
   border-radius: 32px;
   box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-  width: 327px;
 }
 
 #section-answer-info{
@@ -150,6 +149,7 @@ main{
 }
 
 .section-answer-info__text{
+  display: block;
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
@@ -161,6 +161,8 @@ main{
   outline: none;
   border: transparent;
   text-wrap: pretty;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .hide{
@@ -169,4 +171,14 @@ main{
 
 .show{
   display: block;
+}
+
+.section-answer button{
+  margin-top: 32px;
+}
+
+@media (width >= 768px) and (width <= 1024px){
+  .section-text__form-buttons{
+    flex-direction: row;
+  }
 }
