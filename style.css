@@ -211,7 +211,6 @@ button:disabled:hover{
 footer {
   text-align: center;
   color: var(--txt-color);
-  padding: 40px 0;
   display: block;
   height: auto;
   width: 100%;
@@ -263,7 +262,7 @@ footer {
 
   main{
     padding-top: 80px;
-    height: 540px;
+    height: 700px;
     grid-template-columns: repeat(2, 1fr);
   }
 
