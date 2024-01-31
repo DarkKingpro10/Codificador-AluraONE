@@ -205,7 +205,26 @@ button:disabled:hover{
 }
 
 .section-text__form__borrar button{
-  margin-top: 36px;
+  margin: 36px 0 5px 0;
+}
+
+footer {
+  text-align: center;
+  color: var(--txt-color);
+  padding: 40px 0;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.logo-link {
+  height: 50px;
+  margin: 15px 5px 20px 5px;
+}
+
+.logo-link:hover {
+  transform: scale(1.2);
+  transition-duration: 0.5s;
 }
 
 /*RESPONSIVE para Tablets*/
