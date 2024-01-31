@@ -87,6 +87,12 @@ main{
   display: flex;
   align-items: center;
   gap: 8px;
+  transition: scale 0.3 ease;
+}
+
+.section-text__form-info:hover{
+  scale: 1.1;
+  color: red;
 }
 
 .section-text__form-buttons {
@@ -117,12 +123,23 @@ button{
   background-color: var(--accent);
 }
 
+.section-text__form-button-decrypt:disabled{
+  background-color: #D8DFE8;
+}
+
 button:hover{
   filter: brightness(1.4);
   scale: 0.99;
 }
 
+button:disabled:hover{
+  opacity: 0.7;
+  cursor: not-allowed;
+  filter: brightness(1);
+}
+
 .section-answer{
+  height: auto;
   margin: 0px 24px 40px 24px;
   background-color: var(--accent);
   padding: 32px;
@@ -177,7 +194,83 @@ button:hover{
   margin-top: 32px;
 }
 
-@media (width >= 768px) and (width <= 1024px){
+#section-answer-info-icon{
+  display: none;
+}
+
+#answer-codified{
+  width: 100%;
+  height: fit-content;
+  resize: none;
+}
+
+.section-text__form__borrar button{
+  margin-top: 36px;
+}
+
+/*RESPONSIVE para Tablets*/
+@media (width >= 768px) and (width <= 1023px){
+  .section-text__form-buttons{
+    flex-direction: row;
+  }
+
+  header{
+    padding: 73.42px 0px 0px 40px;
+  }
+
+  main{
+    padding-top: 116px;
+  }
+
+  .section-text{
+    padding: 0 40px;
+  }
+
+  .section-answer{
+    margin: 0 40px 40px 40px;
+  }
+
+  #text-area{
+    font-size: 32px;
+  }
+}
+
+/*RESPONSIVE para Computadoras etc*/
+
+@media (width >= 1024px){
+  header{
+    padding: 40px 0px 0px 40px;
+  }
+
+  main{
+    padding-top: 80px;
+    height: 540px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-text{
+    height: 540px;
+    width: 1000px;
+    padding: 0 0 0 240px;
+  }
+
+  .section-answer{
+    position: relative;
+    height: 650px;
+    top: -150px;
+    width: 400px;
+    justify-self: center;
+  }
+
+  #section-answer-info-icon{
+    display: block;
+    margin-top: 50px;
+  }
+
+  #text-area{
+    height: 375px;
+  }
+
   .section-text__form-buttons{
     flex-direction: row;
   }
