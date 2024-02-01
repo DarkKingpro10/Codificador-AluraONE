@@ -41,7 +41,8 @@ FORM.addEventListener("submit", e => {
   const data = Object.fromEntries(new FormData(e.target));
 
   //Reemplazamos todas las coincidencias en el texto
-  const textEncrypted = data.textToEncrypt
+
+  const textEncrypted = data.textToEncrypt.toLowerCase()
     .replaceAll('e', 'enter')
     .replaceAll('i', 'imes')
     .replaceAll('a', 'ai')
@@ -59,7 +60,7 @@ FORM.addEventListener("submit", e => {
 //Añadimos la funcionalidad para desencriptar
 BUTTON_DECRYPT.addEventListener("click", () => {
   //Reemplazamos todas las coincidencias en el texto
-  const textDecrypted = TEXT_AREA_RAW.value
+  const textDecrypted = TEXT_AREA_RAW.value.toLowerCase()
     .replaceAll('enter', 'e')
     .replaceAll('imes', 'i')
     .replaceAll('ai', 'a')
