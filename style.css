@@ -8,12 +8,21 @@
   text-overflow: ellipsis;
 }
 
-:root {
+:root[data-theme = 'light'] {
   --bg-color: #F3F3FB;
   --primary-color: #0A3871;
   --accent: white;
   --txt-color: #495057;
   --title-txt: #343A40;
+}
+
+:root[data-theme = 'dark'] {
+  --bg-color: #121212;
+  --primary-color: #27496D;
+  --accent: #D8ECF1;
+  --txt-color: #718688;
+  --title-txt: #52796F;
+  --footer-bg: rgb(218, 203, 203);
 }
 
 body {
@@ -39,15 +48,66 @@ p {
 
 /*MOBILE STYLES*/
 header {
+  display: flex;
+  justify-content: space-between;
   width: 375px;
   height: 96px;
-  padding: 24px 0px 0px 16px;
+  padding: 24px 16px 0px 16px;
 }
 
 header img {
   width: 32px;
   height: 48px;
   flex-shrink: 0;
+}
+
+.toggle-container {
+  position: relative;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-label {
+  cursor: pointer;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  background-color: #2196F3; /* Color del interruptor en modo claro */
+  border-radius: 15px;
+  position: relative;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.sol-icon,
+.luna-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 3px;
+  transition: transform 0.5s ease;
+}
+
+.sol-icon{
+  transform: translatex(4px);
+}
+
+.luna-icon {
+  transform: translatex(40px);
+}
+
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #333; /* Color del interruptor en modo oscuro */
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.toggle-checkbox:checked + .toggle-label #solIcon {
+  transform: translateX(40px);
+}
+
+.toggle-checkbox:checked + .toggle-label #lunaIcon {
+  transform: translateX(3px);
 }
 
 main {
@@ -214,6 +274,7 @@ footer {
   display: block;
   height: auto;
   width: 100%;
+  background: var(--footer-bg);
 }
 
 .logo-link {
@@ -233,7 +294,8 @@ footer {
   }
 
   header {
-    padding: 73.42px 0px 0px 40px;
+    padding: 73.42px 40px 0px 40px;
+    width: 100%;
   }
 
   main {
@@ -258,6 +320,7 @@ footer {
 @media (width >=1024px) {
   header {
     padding: 40px 0px 0px 40px;
+    width: 65dvw;
   }
 
   main {
@@ -291,20 +354,5 @@ footer {
 
   .section-text__form-buttons {
     flex-direction: row;
-  }
-}
-
-/*Añadiendo el soporte a modo oscuro*/
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #121212;
-    --primary-color: #27496D;
-    --accent: #D8ECF1;
-    --txt-color: #718688;
-    --title-txt: #52796F;
-  }
-
-  footer{
-    background-color: gray;
   }
 }

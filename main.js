@@ -1,3 +1,25 @@
+//Inicializamos el evento para detectar la carga de la pagina
+document.addEventListener('DOMContentLoaded', function() {
+  //Dentro de este se buscara el color por defecto del sistema y se cambiara
+
+  const systemColorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark': 'light';
+
+  document.documentElement.setAttribute('data-theme', systemColorScheme);
+  const switcherTheme = document.getElementById('modoToggle');
+  const root = document.documentElement;
+  if (root.getAttribute('data-theme') === 'dark') {
+    switcherTheme.checked = true;
+  } 
+
+  function toggleTheme(){
+    const setTheme = switcherTheme.checked ? 'dark' : 'light';
+    root.setAttribute('data-theme', setTheme);
+    // localStorage.setItem('theme', setTheme);
+  }
+
+  switcherTheme.addEventListener('click', toggleTheme);
+});
+
 //Declaración de las constantes
 const TEXT_AREA_RAW = document.getElementById("text-area");
 const TEXT_AREA_DECRYPTED = document.getElementById("answer-codified");
