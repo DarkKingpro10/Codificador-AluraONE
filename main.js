@@ -65,12 +65,13 @@ FORM.addEventListener("submit", e => {
   //Reemplazamos todas las coincidencias en el texto
 
   const textEncrypted = data.textToEncrypt.toLowerCase()
-    .replaceAll('a', 'ai')  
     .replaceAll('e', 'enter')
     .replaceAll('i', 'imes')
+    .replaceAll('a', 'ai')
     .replaceAll('o', 'ober')
     .replaceAll('u', 'ufat');
 
+  console.log(textEncrypted);
   //Modificamos la UI para que coinicida con el texto  
   INFO_TEXT_ANSWER.classList.add("hide");
   TEXT_AREA_DECRYPTED.classList.remove("hide");
